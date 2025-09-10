@@ -1,0 +1,133 @@
+# 2400031828
+Niharika 344, [9/10/2025 2:58 PM]
+<html>
+<head>
+                 <h1> Simple Caliculator </h1>
+</head>
+  <body>
+         <form>
+               <table>
+             <tr>
+                 <td>Enter Number-1 : </td>
+             <td><input type="text" id="num1"></td>
+             </tr>
+             <tr>
+                 <td>Enter Number-2 : </td>
+             <td><input type="text" id="num2"></td>
+             </tr>
+             <tr>
+             <td><button type="button" onclick="add()">Add </button></td>
+             <td><button type="button" onclick="multiply()">Multiply </button></td>
+           </tr>
+             </table>
+          </form>
+             <div id="result"> </div>
+          <script>
+             function getInputValues(){
+               const n1 = parseFloat(document.getElementById('num1').value);
+               const n2 = parseFloat(document.getElementById('num2').value);
+               return [n1,n2]
+               }
+            function add(){
+               const [n1,n2] = getInputValues();
+               if(isNaN(n1)||isNaN(n2)){
+               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
+               return;
+               }
+               const sum = n1+n2;
+               document.getElementById('result').innerHTML=<b>The Sum is ${sum}</b>;
+               
+               }
+               function multiply(){
+               const [n1,n2]= getInputValues();
+               if(isNaN(n1)||isNaN(n2)){
+               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
+               return;
+               }
+               const product = n1*n2;
+               document.getElementById('result').innerHTML=The product is ${product};
+               }
+               function substract(){
+               const [n1,n2] = getInputValues();
+               if(isNaN(n1)||isNaN(n2)){
+               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
+               return;
+               const difference = n1-n2;
+               document.getElementById('result').innerHTML=Yhe product is ${difference};
+               }
+               function division(){
+               const [n1,n2]= getInputValues();
+               if(isNaN(n1)||isNaN(n2)){
+               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
+               return;
+               }
+               const quotient = n1/n2;
+               document,getElementById('result').innerHTML=Yhe product is ${quotient};
+               }
+               
+        </script>
+        </body>
+        
+    </html>
+
+Niharika 344, [9/10/2025 2:58 PM]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe4e1; /* misty pink */
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: #fff0f5;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #d36e70;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #d8a7b1;
+      border-radius: 5px;
+      background-color: #fffafa;
+    }
+    input[type="file"] {
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #d36e70;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #c05660;
+    }
+  </style>
+</head>
+<body>
