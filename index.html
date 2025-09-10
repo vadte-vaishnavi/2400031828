@@ -1,89 +1,65 @@
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.getElementsByClassName("mySlides");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 2000); // change image every 2s
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    main {
+      margin-top: 20px;
+    }
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
 <body>
-<form class="card" action="#" method="post">
-<h1>Bakery Order</h1>
-<p>Fill this out and we'll get your treats ready!</p>
 
+  <header>
+    <h1>Welcome to My Sample Page</h1>
+  </header>
 
-<label for="name">Name</label>
-<input id="name" name="name" type="text" placeholder="Full name" required />
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>This is a simple HTML page with some styling.</p>
+    </section>
 
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://www.example.com">Example Website</a></li>
+        <li><a href="https://www.google.com">Google</a></li>
+      </ul>
+    </section>
+  </main>
 
-<label for="phone">Phone Number</label>
-<input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" pattern="[+0-9 ()-]{7,}" required />
-
-
-<label for="item">Item Needed</label>
-<select id="item" name="item" required>
-<option value="" selected disabled>Choose an item</option>
-<option>Cake</option>
-<option>Cupcakes</option>
-<option>Bread</option>
-<option>Cookies</option>
-<option>Other</option>
-</select>
-
-
-<div class="row">
-<div>
-<label for="minPrice">Min Price (₹)</label>
-<input id="minPrice" name="min_price" type="number" min="0" step="50" placeholder="500" />
-</div>
-<div>
-<label for="maxPrice">Max Price (₹)</label>
-<input id="maxPrice" name="max_price" type="number" min="0" step="50" placeholder="2000" />
-</div>
-</div>
-<div class="note">Leave price blank if you're not sure.</div>
-
-
-<button type="submit">Submit Order</button>
-<p class="k"> Your order will arrive in 5 minutes take a seat </p>
-<p class="l">Thank you </p>
-<style>
-    .k{
-        color: rgb(230, 11, 47);
-        font-family: Arial;
-    }
-    .l{
-        color: palevioletred;
-        font-family: Arial;
-    }
-
-</style>
-
-</form>
-
-
-<!-- Optional: basic client-side guard to ensure min ≤ max when both filled -->
-<script>
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-const min = Number(document.getElementById('minPrice').value);
-const max = Number(document.getElementById('maxPrice').value);
-if (min && max && min > max) {
-e.preventDefault();
-alert('Minimum price cannot be greater than maximum price.');
-}
-});
-</script>
-</body>
-</style>
+  <footer>
+    &copy; 2025 My Sample Page
+  </footer>
 
 </body>
-
 </html>
