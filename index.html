@@ -1,133 +1,65 @@
-# 2400031828
-
-<html>
-<head>
-                 <h1> Simple Caliculator </h1>
-</head>
-  <body>
-         <form>
-               <table>
-             <tr>
-                 <td>Enter Number-1 : </td>
-             <td><input type="text" id="num1"></td>
-             </tr>
-             <tr>
-                 <td>Enter Number-2 : </td>
-             <td><input type="text" id="num2"></td>
-             </tr>
-             <tr>
-             <td><button type="button" onclick="add()">Add </button></td>
-             <td><button type="button" onclick="multiply()">Multiply </button></td>
-           </tr>
-             </table>
-          </form>
-             <div id="result"> </div>
-          <script>
-             function getInputValues(){
-               const n1 = parseFloat(document.getElementById('num1').value);
-               const n2 = parseFloat(document.getElementById('num2').value);
-               return [n1,n2]
-               }
-            function add(){
-               const [n1,n2] = getInputValues();
-               if(isNaN(n1)||isNaN(n2)){
-               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
-               return;
-               }
-               const sum = n1+n2;
-               document.getElementById('result').innerHTML=<b>The Sum is ${sum}</b>;
-               
-               }
-               function multiply(){
-               const [n1,n2]= getInputValues();
-               if(isNaN(n1)||isNaN(n2)){
-               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
-               return;
-               }
-               const product = n1*n2;
-               document.getElementById('result').innerHTML=The product is ${product};
-               }
-               function substract(){
-               const [n1,n2] = getInputValues();
-               if(isNaN(n1)||isNaN(n2)){
-               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
-               return;
-               const difference = n1-n2;
-               document.getElementById('result').innerHTML=Yhe product is ${difference};
-               }
-               function division(){
-               const [n1,n2]= getInputValues();
-               if(isNaN(n1)||isNaN(n2)){
-               document.getElementById('result').innerHTML="<b>Invalid Input, Enter the correct Input </b>";
-               return;
-               }
-               const quotient = n1/n2;
-               document,getElementById('result').innerHTML=Yhe product is ${quotient};
-               }
-               
-        </script>
-        </body>
-        
-    </html>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Student Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #ffe4e1; /* misty pink */
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      background-color: #fff0f5;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #d36e70;
-    }
-    label {
-      display: block;
-      margin: 10px 0 5px;
+      margin: 20px;
+      background-color: #f4f4f4;
       color: #333;
     }
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"],
-    input[type="date"],
-    textarea,
-    select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #d8a7b1;
-      border-radius: 5px;
-      background-color: #fffafa;
-    }
-    input[type="file"] {
-      margin-bottom: 15px;
-    }
-    button {
-      background-color: #d36e70;
+    header {
+      background: #007BFF;
       color: white;
-      padding: 12px 20px;
-      border: none;
+      padding: 15px;
+      text-align: center;
       border-radius: 8px;
-      cursor: pointer;
-      width: 100%;
     }
-    button:hover {
-      background-color: #c05660;
+    main {
+      margin-top: 20px;
+    }
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Welcome to My Sample Page</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>This is a simple HTML page with some styling.</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://www.example.com">Example Website</a></li>
+        <li><a href="https://www.google.com">Google</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 My Sample Page
+  </footer>
+
+</body>
+</html>
